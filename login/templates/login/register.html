@@ -9,7 +9,7 @@
     <form action="/login/register/" method="post">
         {% csrf_token %}
         {{ register_form.as_p }}
-        <button type="submit">Register</button>
+        <button type="submit", class="form-control">Register</button>
     </form>
 
 {% endblock %}

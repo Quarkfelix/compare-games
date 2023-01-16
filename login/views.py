@@ -8,6 +8,10 @@ from django.shortcuts import redirect
 
 def login(request):
     if request.method == 'POST':
+        #checks if name register has a value (if yes button was pressed)
+        if request.POST.get('register'):
+            return redirect(register)
+
         form = New_login_form(request.POST)
         if form.is_valid():
             username = form.cleaned_data['username']
